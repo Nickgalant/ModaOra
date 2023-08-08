@@ -1,0 +1,197 @@
+/* Cores utilizadas no projeto:
+
+Background Top Header: #162028
+
+Cor do texto no menu: #425564
+
+Cor dos textos: #555
+
+Cor de fundo do box com imagem de detalhe: #003d52
+
+Cor de fundo do footer: #0b171f
+
+Cor de texto do footer: #6f8597 */
+
+/* Fontes:
+font-family: 'Roboto', sans-serif;
+font-family: 'Viaoda Libre', cursive; 
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    background-color: #162028;
+    color: #fff;
+    width: 100vw;
+    height: 50px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu__title {
+    font-family: 'Viaoda Libre', cursive; 
+    font-weight: 400;
+    margin-left: 10%;
+}
+
+.material-symbols-outlined {
+    display: hidden;
+    visibility: hidden;
+}
+
+.menu__nav {
+    margin-right: 40px;
+    display: flex;
+    gap: 45px;
+}
+
+.menu__nav a {
+    color: #425564;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.825rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu__nav a:hover  {
+    color: #fff;
+}
+
+main {
+    width: 100vw;
+}
+
+#banner img {
+    width: 100%;
+}
+
+#portfolio {
+    text-align: center;
+    width: 80%;
+    margin: 80px auto;
+}
+
+.portfolio__title {
+    font-family: 'Viaoda Libre', cursive; 
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.portfolio__desc {
+    padding: 40px 0;
+    line-height: 1.8;
+    color: #555;
+}
+
+.portfolio__galeria {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: #555;
+}
+
+
+.portfolio__galeria h3 {
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .1em;
+}
+
+#sobre {
+    background-image: url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    background-color: #003d52;
+
+    height: 800px;
+    color: #fff;
+}
+
+.sobre__container {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5em;
+}
+
+.sobre__container-title {
+    font-family: 'Viaoda Libre', cursive; 
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 2.5rem;
+
+}
+
+.sobre__container-desc {
+    line-height: 1.5;
+    width: 70%;
+}
+
+#footer {
+    height: 50px;
+    background-color: #0b171f;
+    color: #6f8597;
+    font-size: 0.825rem;
+    letter-spacing: 0.375rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .material-symbols-outlined {
+        display: block;
+        visibility: visible;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+
+    .menu__nav {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #162028;
+        margin: 0;
+        padding: 10px 30px;
+        flex-direction: column;
+    }
+
+    .portfolio__desc {
+        padding: 40px 20px;
+    }
+    .portfolio__galeria {
+        flex-direction: column;
+    }
+
+    #sobre {
+        height: calc(100vh - 50px);
+    }
+    .sobre__container-desc {
+        width: 100%;
+    }
+}
